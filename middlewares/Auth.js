@@ -1,12 +1,12 @@
 const jwt = require("jsonwebtoken");
-// require("dotenv").config();
+require("dotenv").config();
  const verifyToken =(req,res,next)=>{
     const authHeader = req.headers.authorization
     if(!authHeader){
         return res.status(401).json({message:"Access Denied"})
     }
     const token = authHeader.split(" ")[1]
-        jwt.verify(token,Authentiaction,(err,result)=>{
+        jwt.verify(token,"Authentiaction",(err,result)=>{
               if(!err){
                 req.user_id=result.user_id
                 next()
