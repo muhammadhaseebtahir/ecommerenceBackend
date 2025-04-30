@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const dbConnected=async()=>{
        
-  await mongoose.connect(process.env.MONGO_URL,{
+  await mongoose.connect("mongodb+srv://malikhaseeb456070:A97xZiknmsHiOoSH@cluster0.gly3v.mongodb.net/",{
     dbName:"Ecommerence",
   })
   .then(()=>{
