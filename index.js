@@ -14,7 +14,7 @@ app.use(cors());
 app.use(bodyParser.json());
 require("dotenv").config();
 
-app.use("/",(req,res)=>{
+app.get("/",(req,res)=>{
     res.send("Welcome to the E-commerce API");
 })
 app.listen(process.env.PORT,()=>{
